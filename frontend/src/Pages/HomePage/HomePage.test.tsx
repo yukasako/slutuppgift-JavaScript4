@@ -1,17 +1,17 @@
 import { describe, it, beforeEach } from 'vitest'; // expect missing
-import { render } from '@testing-library/react'; // screen missing
+import { render, screen } from '@testing-library/react';
 import HomePage from './HomePage';
 
-beforeEach(() => render(<HomePage></HomePage>));
+beforeEach(() => render(<HomePage />));
 
 describe('HomePage', () => {
-  it('Render Hero and CTA button.', () => {
-    // expect()
+  it('should have a heading text with "Christmas"', () => {
+    screen.getByRole('heading', { name: /Christmas/i });
   });
-  it('Render text with SEO keywords.', () => {
-    // expect()
-  });
-  it('Render bestseller items.', () => {
-    // expect()
-  });
+  // it('Should have a CTA button to product page.', () => {
+  //   // expect()
+  // });
+  // it('Render text with SEO keywords.', () => {
+  //   // expect()
+  // });
 });
