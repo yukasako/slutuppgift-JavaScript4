@@ -1,0 +1,16 @@
+/* font-family: "Ballet", cursive; */
+@import url('https://fonts.googleapis.com/css2?family=Ballet:opsz@16..72&family=Fleur+De+Leah&family=Imperial+Script&family=Nerko+One&display=swap');
+/* font-family: "Great Vibes", cursive; */
+@import url('https://fonts.googleapis.com/css2?family=Ballet:opsz@16..72&family=Fleur+De+Leah&family=Great+Vibes&family=Imperial+Script&family=Nerko+One&display=swap');
+
+.cursive {
+  /* font-family: 'Ballet', cursive; */
+  font-family: 'Great Vibes', cursive;
+  font-weight: 400;
+  font-size: 24px;
+  font-style: normal;
+}
+
+.textShadow {
+  text-shadow: 8px 8px 10px rgba(0, 0, 0, 0.8);
+}
