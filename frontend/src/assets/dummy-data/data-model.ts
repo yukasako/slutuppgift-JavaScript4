@@ -3,6 +3,17 @@ export interface Item {
   name: string;
   price: number;
   description: string;
-  category: [];
+  category: Category;
   image: string;
+}
+
+export enum Category {
+  BOX,
+  FIGURINE,
+  LAMP,
+  ORNAMENT,
+  SOCK,
+  WREATH,
+  TREE,
+  CANDLE,
 }

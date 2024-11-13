@@ -1,7 +1,7 @@
 import { useParams } from 'react-router-dom';
 import dummyData from '../../assets/dummy-data/data';
 import subImg from '../../assets/hero/hero-6.webp';
-// import ProductList from '../../Components/Items/ProductList';
+import ProductList from '../../Components/Items/ProductList';
 
 function ProductDetailPage() {
   const param = useParams();
@@ -10,12 +10,18 @@ function ProductDetailPage() {
   const selectedItem = dummyData.find((item) => {
     return item.id === itemId;
   });
-  console.log(selectedItem);
+
+  const sameCategory = dummyData.filter((item) => {
+    return item.category === selectedItem?.category;
+  });
+  const suggestions = sameCategory.filter((item) => {
+    return item.id !== selectedItem?.id;
+  });
 
   return (
     <div className='flex flex-col justify-center items-center'>
       {selectedItem ? (
-        <div className='w-4/5 flex flex-col item-center gap-10 py-12'>
+        <div className='w-4/5 flex flex-col item-center gap-12 py-12 my-8'>
           <div className='flex flex-col sm:flex-row items-center gap-10'>
             <img
               className='w-1/2 h-auto object-contain'
@@ -35,9 +41,9 @@ function ProductDetailPage() {
               </button>
             </div>
           </div>
-          <div>
-            <h2 className='text-center'>You may also like...</h2>
-            {/* <ProductList></ProductList> */}
+          <div className='flex flex-col items-center gap-6 py-6'>
+            <h2 className='text-bold italic'>You may also like...</h2>
+            <ProductList items={suggestions}></ProductList>
           </div>
         </div>
       ) : (

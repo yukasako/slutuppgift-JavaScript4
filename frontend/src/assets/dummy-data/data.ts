@@ -1,4 +1,5 @@
 import { Item } from './data-model';
+import { Category } from './data-model';
 
 const dummyData: Item[] = [
   {
@@ -7,7 +8,7 @@ const dummyData: Item[] = [
     price: 100,
     description:
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, expedita soluta! Ipsa, veritatis. Voluptatem magnam impedit consequuntur eaque beatae veritatis quidem, eveniet, laborum doloremque placeat dignissimos earum natus aliquid distinctio!',
-    category: [],
+    category: Category.BOX,
     image: 'box-1',
   },
   {
@@ -16,7 +17,7 @@ const dummyData: Item[] = [
     price: 120,
     description:
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, expedita soluta! Ipsa, veritatis. Voluptatem magnam impedit consequuntur eaque beatae veritatis quidem, eveniet, laborum doloremque placeat dignissimos earum natus aliquid distinctio!',
-    category: [],
+    category: Category.BOX,
     image: 'box-2',
   },
   {
@@ -25,7 +26,7 @@ const dummyData: Item[] = [
     price: 150,
     description:
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, expedita soluta! Ipsa, veritatis. Voluptatem magnam impedit consequuntur eaque beatae veritatis quidem, eveniet, laborum doloremque placeat dignissimos earum natus aliquid distinctio!',
-    category: [],
+    category: Category.BOX,
     image: 'box-3',
   },
   {
@@ -34,7 +35,7 @@ const dummyData: Item[] = [
     price: 50,
     description:
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, expedita soluta! Ipsa, veritatis. Voluptatem magnam impedit consequuntur eaque beatae veritatis quidem, eveniet, laborum doloremque placeat dignissimos earum natus aliquid distinctio!',
-    category: [],
+    category: Category.CANDLE,
     image: 'candle-1',
   },
   {
@@ -43,7 +44,7 @@ const dummyData: Item[] = [
     price: 70,
     description:
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, expedita soluta! Ipsa, veritatis. Voluptatem magnam impedit consequuntur eaque beatae veritatis quidem, eveniet, laborum doloremque placeat dignissimos earum natus aliquid distinctio!',
-    category: [],
+    category: Category.CANDLE,
     image: 'candle-2',
   },
   {
@@ -52,7 +53,7 @@ const dummyData: Item[] = [
     price: 90,
     description:
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, expedita soluta! Ipsa, veritatis. Voluptatem magnam impedit consequuntur eaque beatae veritatis quidem, eveniet, laborum doloremque placeat dignissimos earum natus aliquid distinctio!',
-    category: [],
+    category: Category.FIGURINE,
     image: 'figurine-1',
   },
   {
@@ -61,7 +62,7 @@ const dummyData: Item[] = [
     price: 110,
     description:
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, expedita soluta! Ipsa, veritatis. Voluptatem magnam impedit consequuntur eaque beatae veritatis quidem, eveniet, laborum doloremque placeat dignissimos earum natus aliquid distinctio!',
-    category: [],
+    category: Category.FIGURINE,
     image: 'figurine-2',
   },
   {
@@ -70,7 +71,7 @@ const dummyData: Item[] = [
     price: 130,
     description:
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, expedita soluta! Ipsa, veritatis. Voluptatem magnam impedit consequuntur eaque beatae veritatis quidem, eveniet, laborum doloremque placeat dignissimos earum natus aliquid distinctio!',
-    category: [],
+    category: Category.FIGURINE,
     image: 'figurine-3',
   },
   {
@@ -79,7 +80,7 @@ const dummyData: Item[] = [
     price: 200,
     description:
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, expedita soluta! Ipsa, veritatis. Voluptatem magnam impedit consequuntur eaque beatae veritatis quidem, eveniet, laborum doloremque placeat dignissimos earum natus aliquid distinctio!',
-    category: [],
+    category: Category.LAMP,
     image: 'lamp-1',
   },
   {
@@ -88,7 +89,7 @@ const dummyData: Item[] = [
     price: 220,
     description:
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, expedita soluta! Ipsa, veritatis. Voluptatem magnam impedit consequuntur eaque beatae veritatis quidem, eveniet, laborum doloremque placeat dignissimos earum natus aliquid distinctio!',
-    category: [],
+    category: Category.LAMP,
     image: 'lamp-2',
   },
   {
@@ -97,7 +98,7 @@ const dummyData: Item[] = [
     price: 30,
     description:
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, expedita soluta! Ipsa, veritatis. Voluptatem magnam impedit consequuntur eaque beatae veritatis quidem, eveniet, laborum doloremque placeat dignissimos earum natus aliquid distinctio!',
-    category: [],
+    category: Category.ORNAMENT,
     image: 'ornament-1',
   },
   {
@@ -106,7 +107,7 @@ const dummyData: Item[] = [
     price: 35,
     description:
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, expedita soluta! Ipsa, veritatis. Voluptatem magnam impedit consequuntur eaque beatae veritatis quidem, eveniet, laborum doloremque placeat dignissimos earum natus aliquid distinctio!',
-    category: [],
+    category: Category.ORNAMENT,
     image: 'ornament-2',
   },
   {
@@ -115,7 +116,7 @@ const dummyData: Item[] = [
     price: 40,
     description:
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, expedita soluta! Ipsa, veritatis. Voluptatem magnam impedit consequuntur eaque beatae veritatis quidem, eveniet, laborum doloremque placeat dignissimos earum natus aliquid distinctio!',
-    category: [],
+    category: Category.ORNAMENT,
     image: 'ornament-3',
   },
   {
@@ -124,7 +125,7 @@ const dummyData: Item[] = [
     price: 45,
     description:
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, expedita soluta! Ipsa, veritatis. Voluptatem magnam impedit consequuntur eaque beatae veritatis quidem, eveniet, laborum doloremque placeat dignissimos earum natus aliquid distinctio!',
-    category: [],
+    category: Category.ORNAMENT,
     image: 'ornament-4',
   },
   {
@@ -133,7 +134,7 @@ const dummyData: Item[] = [
     price: 50,
     description:
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, expedita soluta! Ipsa, veritatis. Voluptatem magnam impedit consequuntur eaque beatae veritatis quidem, eveniet, laborum doloremque placeat dignissimos earum natus aliquid distinctio!',
-    category: [],
+    category: Category.ORNAMENT,
     image: 'ornament-5',
   },
   {
@@ -142,7 +143,7 @@ const dummyData: Item[] = [
     price: 20,
     description:
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, expedita soluta! Ipsa, veritatis. Voluptatem magnam impedit consequuntur eaque beatae veritatis quidem, eveniet, laborum doloremque placeat dignissimos earum natus aliquid distinctio!',
-    category: [],
+    category: Category.SOCK,
     image: 'sock-1',
   },
   {
@@ -151,7 +152,7 @@ const dummyData: Item[] = [
     price: 25,
     description:
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, expedita soluta! Ipsa, veritatis. Voluptatem magnam impedit consequuntur eaque beatae veritatis quidem, eveniet, laborum doloremque placeat dignissimos earum natus aliquid distinctio!',
-    category: [],
+    category: Category.SOCK,
     image: 'sock-2',
   },
   {
@@ -160,7 +161,7 @@ const dummyData: Item[] = [
     price: 300,
     description:
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, expedita soluta! Ipsa, veritatis. Voluptatem magnam impedit consequuntur eaque beatae veritatis quidem, eveniet, laborum doloremque placeat dignissimos earum natus aliquid distinctio!',
-    category: [],
+    category: Category.TREE,
     image: 'tree-1',
   },
   {
@@ -169,7 +170,7 @@ const dummyData: Item[] = [
     price: 350,
     description:
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, expedita soluta! Ipsa, veritatis. Voluptatem magnam impedit consequuntur eaque beatae veritatis quidem, eveniet, laborum doloremque placeat dignissimos earum natus aliquid distinctio!',
-    category: [],
+    category: Category.TREE,
     image: 'tree-2',
   },
   {
@@ -178,7 +179,7 @@ const dummyData: Item[] = [
     price: 400,
     description:
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, expedita soluta! Ipsa, veritatis. Voluptatem magnam impedit consequuntur eaque beatae veritatis quidem, eveniet, laborum doloremque placeat dignissimos earum natus aliquid distinctio!',
-    category: [],
+    category: Category.TREE,
     image: 'tree-3',
   },
   {
@@ -187,7 +188,7 @@ const dummyData: Item[] = [
     price: 450,
     description:
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, expedita soluta! Ipsa, veritatis. Voluptatem magnam impedit consequuntur eaque beatae veritatis quidem, eveniet, laborum doloremque placeat dignissimos earum natus aliquid distinctio!',
-    category: [],
+    category: Category.TREE,
     image: 'tree-4',
   },
   {
@@ -196,7 +197,7 @@ const dummyData: Item[] = [
     price: 500,
     description:
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, expedita soluta! Ipsa, veritatis. Voluptatem magnam impedit consequuntur eaque beatae veritatis quidem, eveniet, laborum doloremque placeat dignissimos earum natus aliquid distinctio!',
-    category: [],
+    category: Category.TREE,
     image: 'tree-5',
   },
   {
@@ -205,7 +206,7 @@ const dummyData: Item[] = [
     price: 60,
     description:
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, expedita soluta! Ipsa, veritatis. Voluptatem magnam impedit consequuntur eaque beatae veritatis quidem, eveniet, laborum doloremque placeat dignissimos earum natus aliquid distinctio!',
-    category: [],
+    category: Category.WREATH,
     image: 'wreath-1',
   },
   {
@@ -214,7 +215,7 @@ const dummyData: Item[] = [
     price: 70,
     description:
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, expedita soluta! Ipsa, veritatis. Voluptatem magnam impedit consequuntur eaque beatae veritatis quidem, eveniet, laborum doloremque placeat dignissimos earum natus aliquid distinctio!',
-    category: [],
+    category: Category.WREATH,
     image: 'wreath-2',
   },
   {
@@ -223,7 +224,7 @@ const dummyData: Item[] = [
     price: 80,
     description:
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, expedita soluta! Ipsa, veritatis. Voluptatem magnam impedit consequuntur eaque beatae veritatis quidem, eveniet, laborum doloremque placeat dignissimos earum natus aliquid distinctio!',
-    category: [],
+    category: Category.WREATH,
     image: 'wreath-3',
   },
   {
@@ -232,7 +233,7 @@ const dummyData: Item[] = [
     price: 90,
     description:
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, expedita soluta! Ipsa, veritatis. Voluptatem magnam impedit consequuntur eaque beatae veritatis quidem, eveniet, laborum doloremque placeat dignissimos earum natus aliquid distinctio!',
-    category: [],
+    category: Category.WREATH,
     image: 'wreath-4',
   },
 ];
