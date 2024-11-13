@@ -18,10 +18,12 @@ function HomePage() {
       </div>
       <article>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi,
-          debitis fuga voluptatem commodi praesentium, modi perferendis deleniti
-          magni quo doloremque facilis nesciunt vero labore est earum iusto
-          sapiente animi error.
+          Celebrate the holiday season with our exclusive collection of
+          Christmas items. From thoughtful holiday gifts for loved ones to
+          stunning Christmas decorations that transform your home, our carefully
+          curated seasonal offers bring joy to every occasion. Discover unique
+          gift ideas, festive decor, and special deals that make this Christmas
+          season unforgettable.
         </p>
       </article>
     </div>
