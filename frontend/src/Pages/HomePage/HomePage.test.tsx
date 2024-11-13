@@ -1,16 +1,31 @@
-import { describe, it, beforeEach } from 'vitest'; // expect missing
+// テスト用インポート
+import '@testing-library/jest-dom';
+import { describe, it, expect, beforeEach } from 'vitest'; // expect missing
 import { render, screen } from '@testing-library/react';
+
+// Routerに入れないとテストがエラーになった。
+import { BrowserRouter as Router } from 'react-router-dom';
 import HomePage from './HomePage';
 
-beforeEach(() => render(<HomePage />));
+beforeEach(() =>
+  render(
+    <Router>
+      <HomePage />
+    </Router>
+  )
+);
 
 describe('HomePage', () => {
   it('should have a heading text with "Christmas"', () => {
-    screen.getByRole('heading', { name: /Christmas/i });
+    const h1 = screen.getByRole('heading', { name: /Christmas/i });
+    expect(h1).toBeInTheDocument();
   });
-  // it('Should have a CTA button to product page.', () => {
-  //   // expect()
-  // });
+  it('Should have a CTA button to product page.', async () => {
+    const CTAbtn = screen.getByRole('link', { name: /Check Collection/i });
+    // to属性が正しいかを確認(hrefにするのはコンパイルされた時に<a href="/products">となるから)
+    expect(CTAbtn).toHaveAttribute('href', '/products');
+    expect(CTAbtn).toBeInTheDocument();
+  });
   // it('Render text with SEO keywords.', () => {
   //   // expect()
   // });
