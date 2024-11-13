@@ -8,14 +8,15 @@ import { faSleigh } from '@fortawesome/free-solid-svg-icons';
 
 function Header(props: { location: string }) {
   // console.log(props.location);
-  let bgColor = 'transparent';
+  let bgColor = 'bg-transparent';
   if (props.location !== '/') {
-    bgColor = 'black';
+    bgColor = 'bg-gradient-to-r from-red-800 to-red-950';
+    // bgColor = 'bg-black';
   }
   return (
     <div className='relative z-10'>
       <div
-        className={`bg-${bgColor} text-white flex flex-row justify-between py-4 px-8`}
+        className={`${bgColor} text-white flex flex-row justify-between py-4 px-8`}
       >
         <img src={logo} alt='logo' className='h-10' />
         <nav className='flex justify-end gap-6 font-bold'>

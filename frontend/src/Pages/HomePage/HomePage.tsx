@@ -29,7 +29,7 @@ function HomePage() {
           >
             Christmas Featured Collection
           </h1>
-          <Link to={'/products'}>
+          <Link to={'/products'} className='z-10'>
             <button className='bg-white text-black px-6 py-3 rounded-md font-bold'>
               Check Collection
             </button>
