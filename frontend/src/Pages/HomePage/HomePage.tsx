@@ -1,10 +1,18 @@
 import { Link } from 'react-router-dom';
-import ItemList from '../../Components/Items/ItemList';
 import hero from '../../assets/hero/hero-1.jpg';
 import subImg from '../../assets/hero/hero-4.jpg';
 import style from './HomePage.module.css';
+import ProductList from '../../Components/Items/ProductList';
+import { Item } from '../../assets/dummy-data/data-model';
+import dummyData from '../../assets/dummy-data/data';
 
 function HomePage() {
+  const bestseller: Item[] = [
+    dummyData[0],
+    dummyData[4],
+    dummyData[5],
+    dummyData[20],
+  ];
   return (
     <div className='min-h-screen relative -mt-20'>
       <div>
@@ -40,7 +48,15 @@ function HomePage() {
           season unforgettable.
         </p>
       </article>
-      <ItemList></ItemList>
+      <div className='w-5/6 place-self-center text-center flex flex-col gap-10 py-10'>
+        <h2>Best Sellers</h2>
+        <ProductList items={bestseller}></ProductList>
+        <Link to={'/products'}>
+          <button className='bg-black text-white px-6 py-3 rounded-md font-bold'>
+            All Collections
+          </button>
+        </Link>
+      </div>
       <img src={subImg} alt='subImg' className='w-full h-[25vh] object-cover' />
     </div>
   );
