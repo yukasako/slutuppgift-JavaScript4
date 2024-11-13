@@ -31,12 +31,12 @@ describe('HomePage', () => {
   it('Render text with SEO keywords.', () => {
     const SEOkeywords = [
       /holiday/i,
-      // /gifts/i,
-      // /holiday gifts/i,
-      // /christmas/i,
-      // /decoration/i,
-      // /christmas decoration/i,
-      // /seasonal offers/i,
+      /gifts/i,
+      /holiday gifts/i,
+      /christmas/i,
+      /decoration/i,
+      /christmas decoration/i,
+      /seasonal offers/i,
     ];
 
     SEOkeywords.forEach((keyword) => {
