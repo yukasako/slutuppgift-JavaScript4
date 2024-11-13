@@ -6,12 +6,19 @@ import { faHouseChimney } from '@fortawesome/free-solid-svg-icons';
 import { faGift } from '@fortawesome/free-solid-svg-icons';
 import { faSleigh } from '@fortawesome/free-solid-svg-icons';
 
-function Header() {
+function Header(props: { location: string }) {
+  // console.log(props.location);
+  let bgColor = 'transparent';
+  if (props.location !== '/') {
+    bgColor = 'black';
+  }
   return (
-    <div className='relative z-10 px-10'>
-      <div className='bg-transparent text-white flex flex-row justify-between py-4'>
+    <div className='relative z-10'>
+      <div
+        className={`bg-${bgColor} text-white flex flex-row justify-between py-4 px-8`}
+      >
         <img src={logo} alt='logo' className='h-10' />
-        <nav className='flex flex-row items-center gap-6 font-bold px-10'>
+        <nav className='flex justify-end gap-6 font-bold'>
           <Link to={'/'} className='flex flex-row items-center gap-2'>
             <FontAwesomeIcon icon={faHouseChimney} />
             <span>Home</span>
@@ -26,7 +33,7 @@ function Header() {
           </Link>
         </nav>
       </div>
-      <hr className='border-white' />
+      {props.location === '/' ? <hr className='border-white' /> : null}
     </div>
   );
 }

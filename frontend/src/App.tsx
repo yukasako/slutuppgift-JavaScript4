@@ -1,7 +1,7 @@
 // Old ver.
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+// import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 // New ver.
-// import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import Layout from './Pages/Layout';
 import HomePage from './Pages/HomePage/HomePage';
@@ -14,14 +14,14 @@ function App() {
   return (
     <>
       {/* New ver */}
-      {/* <BrowserRouter
+      <BrowserRouter
         future={{
           v7_startTransition: true,
           v7_relativeSplatPath: true,
         }}
-      > */}
-      {/* Old ver. */}
-      <Router>
+      >
+        {/* Old ver. */}
+        {/* <Router> */}
         <Routes>
           <Route path='/' element={<Layout />}>
             <Route index element={<HomePage />} />
@@ -31,8 +31,8 @@ function App() {
             <Route path='/*' element={<NotFound />} />
           </Route>
         </Routes>
-      </Router>
-      {/* </BrowserRouter> */}
+        {/* </Router> */}
+      </BrowserRouter>
     </>
   );
 }
