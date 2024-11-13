@@ -49,7 +49,7 @@ function HomePage() {
         </p>
       </article>
       <div className='w-5/6 place-self-center text-center flex flex-col gap-10 py-10'>
-        <h2>Best Sellers</h2>
+        <h2 className='text-3xl font-bold'>Best Sellers</h2>
         <ProductList items={bestseller}></ProductList>
         <Link to={'/products'}>
           <button className='bg-black text-white px-6 py-3 rounded-md font-bold'>

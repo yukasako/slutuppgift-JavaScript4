@@ -21,10 +21,10 @@ function Footer() {
           <Link to={'/career'}>Career</Link>
         </div>
         <div className='flex flex-row gap-3'>
-          <FontAwesomeIcon icon={faFacebook} />
-          <FontAwesomeIcon icon={faInstagram} />
-          <FontAwesomeIcon icon={faTwitter} />
-          <FontAwesomeIcon icon={faTiktok} />
+          <FontAwesomeIcon icon={faFacebook} className='min-h-5' />
+          <FontAwesomeIcon icon={faInstagram} className='min-h-5' />
+          <FontAwesomeIcon icon={faTwitter} className='min-h-5' />
+          <FontAwesomeIcon icon={faTiktok} className='min-h-5' />
         </div>
       </div>
       <div className='flex flex-col items-center'>
