@@ -19,16 +19,16 @@ function ProductDetailPage() {
   });
 
   return (
-    <div className='flex flex-col justify-center items-center'>
+    <div className='flex flex-col'>
       {selectedItem ? (
-        <div className='w-4/5 flex flex-col item-center gap-12 py-12 my-8'>
-          <div className='flex flex-col sm:flex-row items-center gap-10'>
+        <div className='w-4/5 flex flex-col mx-auto gap-12 py-12 my-8'>
+          <div className='flex flex-col sm:flex-row mx-auto gap-10 lg:gap-24'>
             <img
               className='w-1/2 h-auto object-contain'
               src={`/productImages/${selectedItem.image}.webp`}
               alt='productImg'
             />
-            <div className='flex flex-col justify-evenly items-center gap-4'>
+            <div className='flex flex-col justify-evenly gap-4 lg:w-1/3'>
               <div className='w-full flex flex-row justify-evenly'>
                 <p className='font-bold	text-xl'>{selectedItem.name}</p>
                 <p>{selectedItem.price} kr</p>
@@ -41,8 +41,8 @@ function ProductDetailPage() {
               </button>
             </div>
           </div>
-          <div className='flex flex-col items-center gap-6 py-6'>
-            <h2 className='text-bold italic'>You may also like...</h2>
+          <div className='flex flex-col gap-6 py-6'>
+            <h2 className='text-bold italic mx-auto'>You may also like...</h2>
             <ProductList items={suggestions}></ProductList>
           </div>
         </div>

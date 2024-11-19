@@ -10,7 +10,7 @@ function ProductCard(props: { item: Item }) {
   return (
     <div
       onClick={() => navigateToDetail()}
-      className='max-w-96 place-self-center flex flex-col gap-2'
+      className='max-w-96 flex flex-col gap-2 my-4'
     >
       <img src={`/productImages/${props.item.image}.webp`} alt='productImg' />
       <div className='flex flex-col px-2'>
