@@ -1,20 +1,32 @@
 import { useParams } from 'react-router-dom';
-import dummyData from '../../assets/dummy-data/data';
+import { useState, useEffect } from 'react';
 import subImg from '../../assets/hero/hero-6.webp';
 import ProductList from '../../Components/Items/ProductList';
+import { Item } from '../../Models/ItemModel';
+import { fetchData } from '../../Utilities/FetchData';
 
 function ProductDetailPage() {
   const param = useParams();
   const itemId = Number(param.id);
+  const [products, setProducts] = useState<Item[]>([]);
 
-  const selectedItem = dummyData.find((item) => {
+  useEffect(() => {
+    getProductData();
+  }, []);
+
+  const getProductData = async () => {
+    const productsData = await fetchData('products');
+    setProducts(productsData);
+  };
+
+  const selectedItem = products.find((item: Item) => {
     return item.id === itemId;
   });
 
-  const sameCategory = dummyData.filter((item) => {
+  const sameCategory = products.filter((item: Item) => {
     return item.category === selectedItem?.category;
   });
-  const suggestions = sameCategory.filter((item) => {
+  const suggestions = sameCategory.filter((item: Item) => {
     return item.id !== selectedItem?.id;
   });
 

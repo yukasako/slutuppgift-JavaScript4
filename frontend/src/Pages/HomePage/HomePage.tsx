@@ -3,16 +3,26 @@ import hero from '../../assets/hero/hero-1.jpg';
 import subImg from '../../assets/hero/hero-4.jpg';
 import style from './HomePage.module.css';
 import ProductList from '../../Components/Items/ProductList';
-import { Item } from '../../assets/dummy-data/data-model';
-import dummyData from '../../assets/dummy-data/data';
+import { Item } from '../../Models/ItemModel';
+import { fetchData } from '../../Utilities/FetchData';
+import { useEffect, useState } from 'react';
 
 function HomePage() {
-  const bestseller: Item[] = [
-    dummyData[0],
-    dummyData[4],
-    dummyData[5],
-    dummyData[20],
-  ];
+  const [bestseller, setBestseller] = useState<Item[]>([]);
+
+  useEffect(() => {
+    getBestseller();
+  }, []);
+
+  const getBestseller = async () => {
+    const productsData = await fetchData('products');
+    console.log(productsData);
+    const bestseller = productsData
+      .sort((a: Item, b: Item) => b.sold - a.sold)
+      .slice(0, 4);
+    setBestseller(bestseller);
+  };
+
   return (
     <div className='min-h-screen relative -mt-20'>
       <div>
@@ -49,7 +59,7 @@ function HomePage() {
       <div className='w-5/6 flex flex-col mx-auto gap-10 py-10'>
         <h2 className='text-3xl font-bold mx-auto'>Best Sellers</h2>
         <ProductList items={bestseller}></ProductList>
-        <Link to={'/products'}>
+        <Link to={'/products'} className='mx-auto'>
           <button className='bg-black text-white px-6 py-3 rounded-md font-bold'>
             All Collections
           </button>

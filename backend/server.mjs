@@ -6,7 +6,6 @@ import routerToProducts from './routes/products-routes.mjs';
 const app = express();
 dotenv.config();
 const PORT = process.env.PORT || 3000;
-console.log(PORT);
 
 // Corsで分岐
 app.use(cors()); // 全てのオリジンを許可
@@ -16,3 +15,7 @@ app.use('/api/products', routerToProducts); //
 
 // サーバー起動
 app.listen(PORT, () => console.log(`Server is running at port: ${PORT}`));
+// http://localhost:3000/api/products
+
+// コマンドで npx json-server data.json -p 3001を走らせるの忘れないで！
+// http://localhost:3001/products

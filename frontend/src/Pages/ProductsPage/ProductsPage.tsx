@@ -1,15 +1,14 @@
 import { useState } from 'react';
 import ProductList from '../../Components/Items/ProductList';
-// import dummyData from '../../assets/dummy-data/data';
 import subImg from '../../assets/hero/hero-3.jpg';
+import { fetchData } from '../../Utilities/FetchData';
 
 function ProductsPage() {
   const [products, setProducts] = useState([]);
 
   const getProductData = async () => {
-    const res = await fetch('http://localhost:3000/api/products');
-    const data = await res.json();
-    setProducts(data.products);
+    const productsData = await fetchData('products');
+    setProducts(productsData);
   };
   getProductData();
 

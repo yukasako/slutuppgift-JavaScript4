@@ -6,6 +6,6 @@ export class Item {
     this.description = description;
     this.category = category;
     this.image = image;
-    this.quantity = quantity;
+    this.stock = stock;
   }
 }

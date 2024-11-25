@@ -1,5 +1,5 @@
 import ProductCard from './ProductCard';
-import { Item } from '../../assets/dummy-data/data-model';
+import { Item } from '../../Models/ItemModel';
 
 function ProductList(props: { items: Item[] }) {
   return (

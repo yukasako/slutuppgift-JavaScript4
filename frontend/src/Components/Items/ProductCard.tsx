@@ -1,4 +1,4 @@
-import { Item } from '../../assets/dummy-data/data-model';
+import { Item } from '../../Models/ItemModel';
 import { useNavigate } from 'react-router-dom';
 
 function ProductCard(props: { item: Item }) {

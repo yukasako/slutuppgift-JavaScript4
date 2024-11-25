@@ -1,4 +1,4 @@
-import { Item } from './data-model';
+import { Item } from '../../Models/ItemModel';
 // import { Category } from './data-model';
 
 const dummyData: Item[] = [
