@@ -1,32 +1,35 @@
 import { useParams } from 'react-router-dom';
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import subImg from '../../assets/hero/hero-6.webp';
 import ProductList from '../../Components/Items/ProductList';
-import { Item } from '../../Models/ItemModel';
+import { ItemModel } from '../../Models/ItemModel';
 import { fetchData } from '../../Utilities/FetchData';
+import ProductDetailCard from '../../Components/ProductDetailCard';
+import NotFound from '../../Components/NotFound';
 
 function ProductDetailPage() {
   const param = useParams();
   const itemId = Number(param.id);
-  const [products, setProducts] = useState<Item[]>([]);
+  const [products, setProducts] = useState<ItemModel[]>([]);
+  const [selectedItem, setSelectedItem] = useState<ItemModel>();
 
   useEffect(() => {
     getProductData();
-  }, []);
+  }, [itemId]);
 
   const getProductData = async () => {
     const productsData = await fetchData('products');
     setProducts(productsData);
+    const selected = productsData.find(
+      (item: ItemModel) => Number(item.id) === itemId
+    );
+    setSelectedItem(selected);
   };
 
-  const selectedItem = products.find((item: Item) => {
-    return item.id === itemId;
-  });
-
-  const sameCategory = products.filter((item: Item) => {
+  const sameCategory = products.filter((item: ItemModel) => {
     return item.category === selectedItem?.category;
   });
-  const suggestions = sameCategory.filter((item: Item) => {
+  const suggestions = sameCategory.filter((item: ItemModel) => {
     return item.id !== selectedItem?.id;
   });
 
@@ -34,34 +37,14 @@ function ProductDetailPage() {
     <div className='flex flex-col'>
       {selectedItem ? (
         <div className='w-4/5 flex flex-col mx-auto gap-12 py-12 my-8'>
-          <div className='flex flex-col sm:flex-row mx-auto gap-10 lg:gap-24'>
-            <img
-              className='w-1/2 h-auto object-contain'
-              src={`/productImages/${selectedItem.image}.webp`}
-              alt='productImg'
-            />
-            <div className='flex flex-col justify-evenly gap-4 lg:w-1/3'>
-              <div className='w-full flex flex-row justify-evenly'>
-                <p className='font-bold	text-xl'>{selectedItem.name}</p>
-                <p>{selectedItem.price} kr</p>
-              </div>
-              <p className='text-slate-500 text-sm sm:text-base'>
-                {selectedItem.description}
-              </p>
-              <button className='w-full bg-black text-white px-6 py-3 rounded-md font-bold'>
-                Add to Cart
-              </button>
-            </div>
-          </div>
+          <ProductDetailCard selectedItem={selectedItem}></ProductDetailCard>
           <div className='flex flex-col gap-6 py-6'>
             <h2 className='text-bold italic mx-auto'>You may also like...</h2>
             <ProductList items={suggestions}></ProductList>
           </div>
         </div>
       ) : (
-        <div>
-          <p>Item Not found</p>
-        </div>
+        <NotFound></NotFound>
       )}
       <img src={subImg} alt='subImg' className='w-full h-[25vh] object-cover' />
     </div>

@@ -1,7 +1,7 @@
-import { Item } from '../../Models/ItemModel';
+import { ItemModel } from '../../Models/ItemModel';
 import { useNavigate } from 'react-router-dom';
 
-function ProductCard(props: { item: Item }) {
+function ProductCard(props: { item: ItemModel }) {
   const navigate = useNavigate();
   const navigateToDetail = () => {
     navigate(`/productDetail/${props.item.id}`);

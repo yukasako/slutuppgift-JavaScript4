@@ -7,21 +7,24 @@ function CartPage() {
   const [cart, setCart] = useState<CartItemModel[]>([]);
 
   useEffect(() => {
-    getCart();
+    getCartItems();
   }, []);
 
-  const getCart = async () => {
+  const getCartItems = async () => {
     const cartItems = await fetchData('cart');
-    console.log(cartItems);
     setCart(cartItems);
   };
 
   return (
     <div>
-      <h1>Cart Page</h1>
-      {cart.map((item, i) => (
-        <CartItemCard item={item} key={i} />
-      ))}
+      <div>
+        {cart.map((item, i) => (
+          <CartItemCard item={item} key={i} />
+        ))}
+      </div>
+      <div>
+        <h1>Cart Items</h1>
+      </div>
     </div>
   );
 }
