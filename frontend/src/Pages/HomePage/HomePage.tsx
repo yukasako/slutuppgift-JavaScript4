@@ -3,12 +3,12 @@ import hero from '../../assets/hero/hero-1.jpg';
 import subImg from '../../assets/hero/hero-4.jpg';
 import style from './HomePage.module.css';
 import ProductList from '../../Components/Items/ProductList';
-import { Item } from '../../Models/ItemModel';
+import { ItemModel } from '../../Models/ItemModel';
 import { fetchData } from '../../Utilities/FetchData';
 import { useEffect, useState } from 'react';
 
 function HomePage() {
-  const [bestseller, setBestseller] = useState<Item[]>([]);
+  const [bestseller, setBestseller] = useState<ItemModel[]>([]);
 
   useEffect(() => {
     getBestseller();
@@ -18,7 +18,7 @@ function HomePage() {
     const productsData = await fetchData('products');
     console.log(productsData);
     const bestseller = productsData
-      .sort((a: Item, b: Item) => b.sold - a.sold)
+      .sort((a: ItemModel, b: ItemModel) => b.sold - a.sold)
       .slice(0, 4);
     setBestseller(bestseller);
   };

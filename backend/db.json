@@ -15,6 +15,30 @@
       "category": "ornament",
       "image": "ornament-5",
       "quantity": 1
+    },
+    {
+      "id": "2",
+      "name": "Gift box with ribbon",
+      "price": 120,
+      "category": "box",
+      "image": "box-2",
+      "quantity": 1
+    },
+    {
+      "id": "6",
+      "name": "Santa Figurine",
+      "price": 90,
+      "category": "figurine",
+      "image": "figurine-1",
+      "quantity": 1
+    },
+    {
+      "id": "8",
+      "name": "Figurine",
+      "price": 130,
+      "category": "figurine",
+      "image": "figurine-3",
+      "quantity": 1
     }
   ],
   "products": [

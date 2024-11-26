@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import ProductList from '../../Components/Items/ProductList';
 import subImg from '../../assets/hero/hero-3.jpg';
 import { fetchData } from '../../Utilities/FetchData';
@@ -6,11 +6,14 @@ import { fetchData } from '../../Utilities/FetchData';
 function ProductsPage() {
   const [products, setProducts] = useState([]);
 
+  useEffect(() => {
+    getProductData();
+  }, []);
+
   const getProductData = async () => {
     const productsData = await fetchData('products');
     setProducts(productsData);
   };
-  getProductData();
 
   return (
     <div>

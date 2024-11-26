@@ -17,5 +17,6 @@ app.use('/api/products', routerToProducts); //
 app.listen(PORT, () => console.log(`Server is running at port: ${PORT}`));
 // http://localhost:3000/api/products
 
-// コマンドで npx json-server data.json -p 3001を走らせるの忘れないで！
+// コマンドで npx json-server db.json -p 3001を走らせるの忘れないで！
+// npx json-server db.json -p 3001
 // http://localhost:3001/products
