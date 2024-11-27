@@ -16,7 +16,6 @@ function HomePage() {
 
   const getBestseller = async () => {
     const productsData = await fetchData('products');
-    console.log(productsData);
     const bestseller = productsData
       .sort((a: ItemModel, b: ItemModel) => b.sold - a.sold)
       .slice(0, 4);

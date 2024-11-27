@@ -1,20 +1,20 @@
 {
   "cart": [
     {
-      "id": "8",
-      "name": "Figurine",
-      "price": 130,
-      "category": "figurine",
-      "image": "figurine-3",
+      "id": "1",
+      "name": "Gift box with ribbon",
+      "price": 100,
+      "category": "box",
+      "image": "box-1",
       "quantity": 1
     },
     {
-      "id": "18",
-      "name": "Christmas Tree",
-      "price": 300,
-      "category": "tree",
-      "image": "tree-1",
-      "quantity": 5
+      "id": "2",
+      "name": "Gift box with ribbon",
+      "price": 120,
+      "category": "box",
+      "image": "box-2",
+      "quantity": 3
     }
   ],
   "products": [
