@@ -1,25 +1,3 @@
-// import { describe, it, beforeEach, expect } from 'vitest';
-// import { render, screen } from '@testing-library/react';
-// import ProductsPage from './ProductsPage';
-
-// // Routerに入れないとテストがエラーになった。
-// import { BrowserRouter as Router } from 'react-router-dom';
-// beforeEach(() =>
-//   render(
-//     <Router>
-//       <ProductsPage />
-//     </Router>
-//   )
-// );
-
-// describe('ProductsPage call API and render product cards.', () => {
-//   it('Render product titles, prices and images of all 26 products.', async () => {
-//     // const mockProducts = 3;
-//     // const images = await screen.findAllByRole('img');
-//     // expect(images).toHaveLength(mockProducts);
-//   });
-// });
-
 import '@testing-library/jest-dom';
 import { describe, it, beforeEach, beforeAll, expect } from 'vitest';
 import { render, screen } from '@testing-library/react';
@@ -29,7 +7,7 @@ import ProductList from '../../Components/Items/ProductList';
 import ProductsPage from './ProductsPage';
 import { BrowserRouter as Router } from 'react-router-dom';
 
-// モックの代わりにデータを取得。
+// MockData, refer to src/testMock/handlers.ts
 let mockProducts: ItemModel[];
 beforeAll(async () => {
   mockProducts = await fetchData('products');
@@ -44,12 +22,12 @@ beforeEach(() =>
   )
 );
 
-describe('Render product titles, prices and images of all 26 products.', () => {
-  it('tests if all 26 product images are rendered.', async () => {
-    const totalProducts = 26;
+describe('Rendering of product titles and images.', () => {
+  it('tests if all images of fetched products are rendered.', async () => {
+    const mockProducts = 3;
     const heroImage = 1;
     const images = await screen.findAllByRole('img');
-    expect(images).toHaveLength(totalProducts + heroImage);
+    expect(images).toHaveLength(mockProducts + heroImage);
   });
   it('tests if product names are rendered.', () => {
     mockProducts.forEach((mockProducts) => {
