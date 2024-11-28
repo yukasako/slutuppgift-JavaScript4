@@ -2,7 +2,7 @@
 
 ## **Backend**
 
-### **Mock Server**
+### **Mock Server: json-server**
 
 The backend is a mock server created using `json-server`.
 
