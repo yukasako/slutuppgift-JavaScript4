@@ -1,18 +1,4 @@
 function InputForm() {
-  const emptyCart = () => {
-    console.log('デリートしようとした');
-    // try {
-    //   const response = await fetch(`http://localhost:3001/cart/`, {
-    //     method: 'Delete',
-    //   });
-    //   if (response.ok) {
-    //     alert('Thank you for your order!');
-    //   }
-    // } catch (err) {
-    //   alert(`Error: ${err}`);
-    // }
-  };
-
   return (
     <div className='max-w-lg mx-auto p-6 bg-white rounded-lg shadow-md mt-6'>
       <h2 className='text-2xl font-bold mb-6'>Payment Information</h2>
@@ -93,9 +79,6 @@ function InputForm() {
         <button
           type='submit'
           className='w-full bg-black text-white px-6 py-3 rounded-md font-bold'
-          onClick={() => {
-            emptyCart();
-          }}
         >
           Submit Payment
         </button>

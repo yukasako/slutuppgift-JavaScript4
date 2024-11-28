@@ -48,10 +48,10 @@ function HomePage() {
       <article className='bg-slate-950 text-white italic'>
         <p className={`w-2/3 mx-auto py-10 text-center ${style.cursive}`}>
           Celebrate the holiday season with our exclusive collection of
-          Christmas items. From thoughtful holiday gifts for loved ones to
-          stunning Christmas decorations that transform your home, our carefully
+          christmas items. From thoughtful holiday gifts for loved ones to
+          stunning christmas decorations that transform your home, our carefully
           curated seasonal offers bring joy to every occasion. Discover unique
-          gift ideas, festive decor, and special deals that make this Christmas
+          gift ideas, festive decor, and special deals that make this christmas
           season unforgettable.
         </p>
       </article>

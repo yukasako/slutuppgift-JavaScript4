@@ -14,13 +14,29 @@
       "price": 120,
       "category": "box",
       "image": "box-2",
-      "quantity": 3
+      "quantity": 4
+    },
+    {
+      "id": "4",
+      "name": "Candle",
+      "price": 50,
+      "category": "candle",
+      "image": "candle-1",
+      "quantity": 1
+    },
+    {
+      "id": "25",
+      "name": "Wreath",
+      "price": 80,
+      "category": "wreath",
+      "image": "wreath-3",
+      "quantity": 1
     }
   ],
   "products": [
     {
       "id": "1",
-      "name": "Gift box with ribbon",
+      "name": "Gift box (Medium)",
       "price": 100,
       "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, expedita soluta! Ipsa, veritatis. Voluptatem magnam impedit consequuntur eaque beatae veritatis quidem, eveniet, laborum doloremque placeat dignissimos earum natus aliquid distinctio!",
       "category": "box",
@@ -30,7 +46,7 @@
     },
     {
       "id": "2",
-      "name": "Gift box with ribbon",
+      "name": "Gift box (Big)",
       "price": 120,
       "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, expedita soluta! Ipsa, veritatis. Voluptatem magnam impedit consequuntur eaque beatae veritatis quidem, eveniet, laborum doloremque placeat dignissimos earum natus aliquid distinctio!",
       "category": "box",
@@ -40,7 +56,7 @@
     },
     {
       "id": "3",
-      "name": "Gift box with ribbon",
+      "name": "Gift box (Small)",
       "price": 150,
       "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, expedita soluta! Ipsa, veritatis. Voluptatem magnam impedit consequuntur eaque beatae veritatis quidem, eveniet, laborum doloremque placeat dignissimos earum natus aliquid distinctio!",
       "category": "box",
@@ -50,7 +66,7 @@
     },
     {
       "id": "4",
-      "name": "Candle",
+      "name": "Candle set",
       "price": 50,
       "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, expedita soluta! Ipsa, veritatis. Voluptatem magnam impedit consequuntur eaque beatae veritatis quidem, eveniet, laborum doloremque placeat dignissimos earum natus aliquid distinctio!",
       "category": "candle",
@@ -70,7 +86,7 @@
     },
     {
       "id": "6",
-      "name": "Santa Figurine",
+      "name": "Santa figurine",
       "price": 90,
       "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, expedita soluta! Ipsa, veritatis. Voluptatem magnam impedit consequuntur eaque beatae veritatis quidem, eveniet, laborum doloremque placeat dignissimos earum natus aliquid distinctio!",
       "category": "figurine",
@@ -80,7 +96,7 @@
     },
     {
       "id": "7",
-      "name": "Figurine",
+      "name": "Deer figurine",
       "price": 110,
       "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, expedita soluta! Ipsa, veritatis. Voluptatem magnam impedit consequuntur eaque beatae veritatis quidem, eveniet, laborum doloremque placeat dignissimos earum natus aliquid distinctio!",
       "category": "figurine",
@@ -90,7 +106,7 @@
     },
     {
       "id": "8",
-      "name": "Figurine",
+      "name": "Snow dome",
       "price": 130,
       "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, expedita soluta! Ipsa, veritatis. Voluptatem magnam impedit consequuntur eaque beatae veritatis quidem, eveniet, laborum doloremque placeat dignissimos earum natus aliquid distinctio!",
       "category": "figurine",
@@ -100,7 +116,7 @@
     },
     {
       "id": "9",
-      "name": "Lamp",
+      "name": "Classic lamp",
       "price": 200,
       "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, expedita soluta! Ipsa, veritatis. Voluptatem magnam impedit consequuntur eaque beatae veritatis quidem, eveniet, laborum doloremque placeat dignissimos earum natus aliquid distinctio!",
       "category": "lamp",
@@ -110,7 +126,7 @@
     },
     {
       "id": "10",
-      "name": "Lamp",
+      "name": "Decoration lamp",
       "price": 220,
       "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, expedita soluta! Ipsa, veritatis. Voluptatem magnam impedit consequuntur eaque beatae veritatis quidem, eveniet, laborum doloremque placeat dignissimos earum natus aliquid distinctio!",
       "category": "lamp",
@@ -120,7 +136,7 @@
     },
     {
       "id": "11",
-      "name": "Ornament",
+      "name": "Ornament set",
       "price": 30,
       "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, expedita soluta! Ipsa, veritatis. Voluptatem magnam impedit consequuntur eaque beatae veritatis quidem, eveniet, laborum doloremque placeat dignissimos earum natus aliquid distinctio!",
       "category": "ornament",
@@ -130,7 +146,7 @@
     },
     {
       "id": "12",
-      "name": "Ornament",
+      "name": "Star ornament",
       "price": 35,
       "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, expedita soluta! Ipsa, veritatis. Voluptatem magnam impedit consequuntur eaque beatae veritatis quidem, eveniet, laborum doloremque placeat dignissimos earum natus aliquid distinctio!",
       "category": "ornament",
@@ -140,7 +156,7 @@
     },
     {
       "id": "13",
-      "name": "Ornament",
+      "name": "Ornament A",
       "price": 40,
       "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, expedita soluta! Ipsa, veritatis. Voluptatem magnam impedit consequuntur eaque beatae veritatis quidem, eveniet, laborum doloremque placeat dignissimos earum natus aliquid distinctio!",
       "category": "ornament",
@@ -150,7 +166,7 @@
     },
     {
       "id": "14",
-      "name": "Ornament",
+      "name": "Ornament B",
       "price": 45,
       "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, expedita soluta! Ipsa, veritatis. Voluptatem magnam impedit consequuntur eaque beatae veritatis quidem, eveniet, laborum doloremque placeat dignissimos earum natus aliquid distinctio!",
       "category": "ornament",
@@ -160,7 +176,7 @@
     },
     {
       "id": "15",
-      "name": "Ornament",
+      "name": "Ornament C",
       "price": 50,
       "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, expedita soluta! Ipsa, veritatis. Voluptatem magnam impedit consequuntur eaque beatae veritatis quidem, eveniet, laborum doloremque placeat dignissimos earum natus aliquid distinctio!",
       "category": "ornament",
@@ -180,7 +196,7 @@
     },
     {
       "id": "17",
-      "name": "Sock",
+      "name": "Sock with pattern",
       "price": 25,
       "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, expedita soluta! Ipsa, veritatis. Voluptatem magnam impedit consequuntur eaque beatae veritatis quidem, eveniet, laborum doloremque placeat dignissimos earum natus aliquid distinctio!",
       "category": "sock",
@@ -190,7 +206,7 @@
     },
     {
       "id": "18",
-      "name": "Christmas Tree",
+      "name": "Christmas tree (classic)",
       "price": 300,
       "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, expedita soluta! Ipsa, veritatis. Voluptatem magnam impedit consequuntur eaque beatae veritatis quidem, eveniet, laborum doloremque placeat dignissimos earum natus aliquid distinctio!",
       "category": "tree",
@@ -200,7 +216,7 @@
     },
     {
       "id": "19",
-      "name": "Christmas Tree",
+      "name": "Christmas Tree A",
       "price": 350,
       "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, expedita soluta! Ipsa, veritatis. Voluptatem magnam impedit consequuntur eaque beatae veritatis quidem, eveniet, laborum doloremque placeat dignissimos earum natus aliquid distinctio!",
       "category": "tree",
@@ -210,7 +226,7 @@
     },
     {
       "id": "20",
-      "name": "Christmas Tree",
+      "name": "Christmas Tree B",
       "price": 400,
       "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, expedita soluta! Ipsa, veritatis. Voluptatem magnam impedit consequuntur eaque beatae veritatis quidem, eveniet, laborum doloremque placeat dignissimos earum natus aliquid distinctio!",
       "category": "tree",
@@ -220,7 +236,7 @@
     },
     {
       "id": "21",
-      "name": "Christmas Tree",
+      "name": "Christmas Tree C",
       "price": 450,
       "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, expedita soluta! Ipsa, veritatis. Voluptatem magnam impedit consequuntur eaque beatae veritatis quidem, eveniet, laborum doloremque placeat dignissimos earum natus aliquid distinctio!",
       "category": "tree",
@@ -230,7 +246,7 @@
     },
     {
       "id": "22",
-      "name": "Christmas Tree",
+      "name": "Christmas Tree D",
       "price": 500,
       "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, expedita soluta! Ipsa, veritatis. Voluptatem magnam impedit consequuntur eaque beatae veritatis quidem, eveniet, laborum doloremque placeat dignissimos earum natus aliquid distinctio!",
       "category": "tree",
@@ -240,7 +256,7 @@
     },
     {
       "id": "23",
-      "name": "Wreath",
+      "name": "Wreath (White ribbon)",
       "price": 60,
       "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, expedita soluta! Ipsa, veritatis. Voluptatem magnam impedit consequuntur eaque beatae veritatis quidem, eveniet, laborum doloremque placeat dignissimos earum natus aliquid distinctio!",
       "category": "wreath",
@@ -250,7 +266,7 @@
     },
     {
       "id": "24",
-      "name": "Wreath",
+      "name": "Wreath (Brown ribbon)",
       "price": 70,
       "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, expedita soluta! Ipsa, veritatis. Voluptatem magnam impedit consequuntur eaque beatae veritatis quidem, eveniet, laborum doloremque placeat dignissimos earum natus aliquid distinctio!",
       "category": "wreath",
@@ -260,7 +276,7 @@
     },
     {
       "id": "25",
-      "name": "Wreath",
+      "name": "Wreath (Classic)",
       "price": 80,
       "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, expedita soluta! Ipsa, veritatis. Voluptatem magnam impedit consequuntur eaque beatae veritatis quidem, eveniet, laborum doloremque placeat dignissimos earum natus aliquid distinctio!",
       "category": "wreath",
@@ -270,7 +286,7 @@
     },
     {
       "id": "26",
-      "name": "Wreath",
+      "name": "Wreath (Red berries)",
       "price": 90,
       "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, expedita soluta! Ipsa, veritatis. Voluptatem magnam impedit consequuntur eaque beatae veritatis quidem, eveniet, laborum doloremque placeat dignissimos earum natus aliquid distinctio!",
       "category": "wreath",

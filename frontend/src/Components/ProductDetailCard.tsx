@@ -66,7 +66,7 @@ function ProductDetailCard({ selectedItem }: ProductDetailCardProps) {
       <img
         className='w-1/2 h-auto object-contain mx-auto'
         src={`/productImages/${selectedItem.image}.webp`}
-        alt='productImg'
+        alt={`productImg-${selectedItem.id}`}
       />
       <div className='flex flex-col justify-evenly gap-4 lg:w-1/3'>
         <div className='w-full flex flex-row justify-evenly'>

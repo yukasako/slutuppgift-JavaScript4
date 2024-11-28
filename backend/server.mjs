@@ -19,4 +19,3 @@ app.listen(PORT, () => console.log(`Server is running at port: ${PORT}`));
 
 // コマンドで npx json-server db.json -p 3001を走らせるの忘れないで！
 // npx json-server db.json -p 3001
-// http://localhost:3001/products

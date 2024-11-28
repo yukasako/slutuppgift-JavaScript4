@@ -56,16 +56,16 @@ function CartPage() {
 
       {checkout ? (
         <div>
-          <div>
+          <div className='px-10'>
             <p className='text-right text-xl'>{totalQuantity} items </p>
-            <p className='text-right text-3xl font-bold '>
+            <p className='text-right text-3xl font-bold'>
               Total: {totalPrice} kr
             </p>
           </div>
           <InputForm></InputForm>
         </div>
       ) : (
-        <></>
+        <div className='mw-1/2'></div>
       )}
     </div>
   );

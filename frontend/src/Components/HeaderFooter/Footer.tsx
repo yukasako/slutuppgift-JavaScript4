@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import logo from '../../assets/logo/logo.png';
+import logo from '../../assets/logo/logo.svg';
 
 // FontAwsome
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -28,7 +28,7 @@ function Footer() {
         </div>
       </div>
       <div className='flex flex-col items-center'>
-        <img src={logo} alt='logo' className='w-10' />
+        <img src={logo} alt='logo' className='h-10' />
         <p>Store Name @2024</p>
       </div>
     </div>
