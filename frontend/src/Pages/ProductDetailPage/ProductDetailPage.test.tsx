@@ -1,21 +1,18 @@
 import '@testing-library/jest-dom';
-import { describe, it, expect, beforeEach } from 'vitest';
+import { describe, it, expect, beforeEach, beforeAll } from 'vitest';
 import { render, screen } from '@testing-library/react';
 import ProductDetailPage from './ProductDetailPage';
 import ProductDetailCard from '../../Components/ProductDetailCard';
 import { BrowserRouter as Router } from 'react-router-dom';
+import { ItemModel } from '../../Models/ItemModel';
+import { fetchData } from '../../Utilities/FetchData';
 
-const mockItem = {
-  id: 1,
-  name: 'Gift box with ribbon',
-  price: 100,
-  description:
-    'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, expedita soluta! Ipsa, veritatis. Voluptatem magnam impedit consequuntur eaque beatae veritatis quidem, eveniet, laborum doloremque placeat dignissimos earum natus aliquid distinctio!',
-  category: 'box',
-  image: 'box-1',
-  stock: 2,
-  sold: 5,
-};
+// MockData, refer to src/testMock/handlers.ts
+let mockItem: ItemModel;
+beforeAll(async () => {
+  const mockProducts = await fetchData('products');
+  mockItem = mockProducts[0];
+});
 
 beforeEach(() => {
   render(
@@ -27,7 +24,7 @@ beforeEach(() => {
 });
 
 describe('ProductDetailPage', () => {
-  it('render product details such as images, name, price', () => {
+  it('tests if product details (images, name, price) are rendered.', () => {
     const productImg = screen.getByAltText(`productImg-${mockItem.id}`);
     const productName = screen.getByText(mockItem.name);
     const productPrice = screen.getByText(`${mockItem.price} kr`);
