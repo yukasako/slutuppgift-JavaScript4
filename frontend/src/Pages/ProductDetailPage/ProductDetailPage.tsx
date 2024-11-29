@@ -14,16 +14,16 @@ function ProductDetailPage() {
   const [selectedItem, setSelectedItem] = useState<ItemModel>();
 
   useEffect(() => {
-    getProductData();
+    getProductsData();
   }, [itemId]);
 
-  const getProductData = async () => {
+  const getProductsData = async () => {
     const productsData = await fetchData('products');
     setProducts(productsData);
-    const selected = productsData.find(
+    const selectedItem = productsData.find(
       (item: ItemModel) => Number(item.id) === itemId
     );
-    setSelectedItem(selected);
+    setSelectedItem(selectedItem);
   };
 
   const sameCategory = products.filter((item: ItemModel) => {
