@@ -1,5 +1,9 @@
 import { CartItemModel, ItemModel } from '../Models/ItemModel';
-import { fetchData } from '../Utilities/FetchData';
+import {
+  fetchData,
+  postCartItem,
+  updateCartItem,
+} from '../Utilities/FetchData';
 
 type ProductDetailCardProps = {
   selectedItem: ItemModel;
@@ -8,7 +12,6 @@ type ProductDetailCardProps = {
 function ProductDetailCard({ selectedItem }: ProductDetailCardProps) {
   const addToCart = async () => {
     const cartItems = await fetchData('cart');
-    console.log(cartItems);
 
     // もし同じアイテムがカートにあれば、Quantityを変更し
     const existingItem = cartItems.filter(
@@ -16,48 +19,20 @@ function ProductDetailCard({ selectedItem }: ProductDetailCardProps) {
     )[0]; // json-serverの仕様で配列に格納されちゃうから[0]で取り出し
 
     if (existingItem) {
-      try {
-        const updateQuantity = {
-          ...existingItem,
-          quantity: existingItem.quantity + 1,
-        };
-        const response = await fetch(
-          `http://localhost:3001/cart/${selectedItem.id}`,
-          {
-            method: 'PUT',
-            headers: {},
-            body: JSON.stringify(updateQuantity),
-          }
-        );
-        if (response.ok) {
-          alert('Item is added to the cart');
-        }
-      } catch (err) {
-        alert(`Error: ${err}`);
-      }
+      const updateQuantity = {
+        ...existingItem,
+        quantity: existingItem.quantity + 1,
+      };
+      updateCartItem(selectedItem.id, updateQuantity);
+      alert('Item is added to the cart');
     }
     // もし無ければ新たに１点カートにポストする。
     else {
-      try {
-        const body = {
-          id: selectedItem.id,
-          name: selectedItem.name,
-          price: selectedItem.price,
-          category: selectedItem.category,
-          image: selectedItem.image,
-          quantity: 1,
-        };
-        const response = await fetch(`http://localhost:3001/cart`, {
-          method: 'POST',
-          headers: {},
-          body: JSON.stringify(body),
-        });
-        if (response.ok) {
-          alert('Item is added to the cart');
-        }
-      } catch (err) {
-        alert(`Error: ${err}`);
-      }
+      const body: CartItemModel = {
+        ...selectedItem,
+        quantity: 1,
+      };
+      postCartItem(body);
     }
   };
 

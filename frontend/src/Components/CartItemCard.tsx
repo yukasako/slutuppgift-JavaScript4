@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
 import { CartItemModel } from '../Models/ItemModel';
+import { deleteCartItem } from '../Utilities/FetchData';
+import { updateCartItem } from '../Utilities/FetchData';
 
 type CartItemProps = {
   item: CartItemModel;
@@ -15,41 +17,16 @@ function CartItemCard({ item }: CartItemProps) {
     // Backend
     updateQuantity();
     if (quantity === 0) {
-      deleteCartItem();
+      deleteCartItem(item.id);
     }
   }, [quantity]);
 
-  const deleteCartItem = async () => {
-    try {
-      const response = await fetch(`http://localhost:3001/cart/${item.id}`, {
-        method: 'Delete',
-      });
-      if (response.ok) {
-        alert('Item is removed from cart');
-        window.location.reload(); // 成功後にページを再読み込み
-      }
-    } catch (err) {
-      alert(`Error: ${err}`);
-    }
-  };
-
   const updateQuantity = async () => {
-    try {
-      const updateQuantity = {
-        ...item,
-        quantity: quantity,
-      };
-      const response = await fetch(`http://localhost:3001/cart/${item.id}`, {
-        method: 'PUT',
-        headers: {},
-        body: JSON.stringify(updateQuantity),
-      });
-      if (response.ok) {
-        console.log(updateQuantity.quantity);
-      }
-    } catch (err) {
-      alert(`Error: ${err}`);
-    }
+    const updateQuantity = {
+      ...item,
+      quantity: quantity,
+    };
+    updateCartItem(item.id, updateQuantity);
   };
 
   const increment = () => {
@@ -94,7 +71,7 @@ function CartItemCard({ item }: CartItemProps) {
         <p className='text-right'>Total: {totalPrice}kr</p>
         <button
           onClick={() => {
-            deleteCartItem();
+            deleteCartItem(item.id);
           }}
           className='bg-neutral-200 text-black rounded-full p-1'
         >

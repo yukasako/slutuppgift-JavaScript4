@@ -1,36 +1,26 @@
 {
   "cart": [
     {
-      "id": "1",
-      "name": "Gift box with ribbon",
-      "price": 100,
-      "category": "box",
-      "image": "box-1",
-      "quantity": 1
-    },
-    {
       "id": "2",
-      "name": "Gift box with ribbon",
+      "name": "Gift box (Big)",
       "price": 120,
+      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, expedita soluta! Ipsa, veritatis. Voluptatem magnam impedit consequuntur eaque beatae veritatis quidem, eveniet, laborum doloremque placeat dignissimos earum natus aliquid distinctio!",
       "category": "box",
       "image": "box-2",
-      "quantity": 4
+      "stock": 2,
+      "sold": 5,
+      "quantity": 3
     },
     {
-      "id": "4",
-      "name": "Candle",
-      "price": 50,
-      "category": "candle",
-      "image": "candle-1",
-      "quantity": 1
-    },
-    {
-      "id": "25",
-      "name": "Wreath",
-      "price": 80,
-      "category": "wreath",
-      "image": "wreath-3",
-      "quantity": 1
+      "id": "3",
+      "name": "Gift box (Small)",
+      "price": 150,
+      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, expedita soluta! Ipsa, veritatis. Voluptatem magnam impedit consequuntur eaque beatae veritatis quidem, eveniet, laborum doloremque placeat dignissimos earum natus aliquid distinctio!",
+      "category": "box",
+      "image": "box-3",
+      "stock": 2,
+      "sold": 5,
+      "quantity": 2
     }
   ],
   "products": [
