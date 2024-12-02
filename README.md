@@ -2,9 +2,9 @@
 
 ## **Backend**
 
-### **Mock Server: json-server**
+### **Mock Server: node.js and json-server**
 
-The backend is a mock server created using `json-server`.
+The backend is a mock server created using `node.js`, `express` and `json-server`.
 
 #### **Setup Instructions**:
 
@@ -68,7 +68,7 @@ or
    npm run dev
 ```
 
-4. Run tests:
+4. Run tests by vitest:
 
 ```
    npm test
