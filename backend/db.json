@@ -9,18 +9,7 @@
       "image": "box-2",
       "stock": 2,
       "sold": 5,
-      "quantity": 3
-    },
-    {
-      "id": "3",
-      "name": "Gift box (Small)",
-      "price": 150,
-      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, expedita soluta! Ipsa, veritatis. Voluptatem magnam impedit consequuntur eaque beatae veritatis quidem, eveniet, laborum doloremque placeat dignissimos earum natus aliquid distinctio!",
-      "category": "box",
-      "image": "box-3",
-      "stock": 2,
-      "sold": 5,
-      "quantity": 2
+      "quantity": 1
     }
   ],
   "products": [

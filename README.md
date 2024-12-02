@@ -39,8 +39,8 @@ or
 ```
 
 5. The mock server will run on:
-   http://localhost:3000/api/products
-   http://localhost:3000/api/cart
+   - http://localhost:3000/api/products
+   - http://localhost:3000/api/cart
 
 ## **Frontend**
 

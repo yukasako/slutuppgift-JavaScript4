@@ -14,9 +14,9 @@ app.use(express.json()); //JSON形式のリクエストボディを解析し、r
 app.use('/api/products', routerToProducts);
 app.use('/api/cart', routerToCart);
 
-// サーバー起動
+// Run server
 app.listen(PORT, () => console.log(`Server is running at port: ${PORT}`));
 // http://localhost:3000/api/products
 
-// json.serverを　npx json-server db.json -p 3001を走らせるの忘れないで！
+// Run json.server by "npx json-server db.json -p 3001"
 // npx json-server db.json -p 3001
