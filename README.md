@@ -10,38 +10,38 @@ The backend is a mock server created using `node.js`, `express` and `json-server
 
 1. Navigate to the backend directory:
 
-```
-   cd backend
-```
+   ```
+      cd backend
+   ```
 
 2. Install dependencies:
 
-```
-   npm install
-```
+   ```
+      npm install
+   ```
 
 3. Start json-server:
 
-```
-   npx json-server db.json -p 3001
-```
-4. Open a new terminal and navigate to the backend directory :
+   ```
+      npx json-server db.json -p 3001
+   ```
+4. **Open a new terminal** and navigate to the backend directory :
 
-```
-   cd backend
-```
+   ```
+      cd backend
+   ```
 
 5. Start mock server:
 
-```
-   npm run dev
-```
+   ```
+      npm run dev
+   ```
 
 or
 
-```
-   npm start
-```
+   ```
+      npm start
+   ```
 
 6. The mock server will run on:
    - http://localhost:3000/api/products
@@ -57,26 +57,26 @@ or
 
 1. Navigate to the frontend directory:
 
-```
-   cd frontend
-```
+   ```
+      cd frontend
+   ```
 
 2. Install dependencies:
 
-```
-   npm install
-```
+   ```
+      npm install
+   ```
 
 3. Start the development server:
 
-```
-   npm run dev
-```
+   ```
+      npm run dev
+   ```
 
 4. Run tests by vitest with a new terminal:
-```
-   cd frontend
-```
-```
-   npm test
-```
+   ```
+      cd frontend
+   ```
+   ```
+      npm test
+   ```
