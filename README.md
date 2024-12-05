@@ -25,8 +25,13 @@ The backend is a mock server created using `node.js`, `express` and `json-server
 ```
    npx json-server db.json -p 3001
 ```
+4. Open a new terminal and navigate to the backend directory :
 
-4. Start mock server:
+```
+   cd backend
+```
+
+5. Start mock server:
 
 ```
    npm run dev
@@ -38,7 +43,7 @@ or
    npm start
 ```
 
-5. The mock server will run on:
+6. The mock server will run on:
    - http://localhost:3000/api/products
    - http://localhost:3000/api/cart
 
@@ -68,8 +73,10 @@ or
    npm run dev
 ```
 
-4. Run tests by vitest:
-
+4. Run tests by vitest with a new terminal:
+```
+   cd frontend
+```
 ```
    npm test
 ```
