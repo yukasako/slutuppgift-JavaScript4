@@ -37,12 +37,6 @@ The backend is a mock server created using `node.js`, `express` and `json-server
       npm run dev
    ```
 
-or
-
-   ```
-      npm start
-   ```
-
 6. The mock server will run on:
    - http://localhost:3000/api/products
    - http://localhost:3000/api/cart
